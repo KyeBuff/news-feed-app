@@ -6,7 +6,7 @@ const NewsListItem = (props) => (
 	<TouchableHighlight
 		onPress={() => props.onPress(props.item)}
 	>
-		<View style={styles.itemContainer}>
+		<View>
 			<Text 
 				style={styles.item}
 				numberOfLines={1}
@@ -23,14 +23,12 @@ const NewsListItem = (props) => (
 export default NewsListItem;
 
 const styles = StyleSheet.create({
-	itemContainer: {
-		marginVertical: 10,
-		paddingHorizontal: 14,
-	},
 	item: {
+		marginVertical: 12,
 		marginBottom: 5,
 		fontSize: 16,
 		fontWeight: 'bold',
+		paddingHorizontal: 14,
 	},
 	div: {
 		height: 0.5,
@@ -38,6 +36,8 @@ const styles = StyleSheet.create({
 		marginHorizontal: 10,
 	},
 	published: {
-		marginBottom: 10,
+		color: '#6C6C6C',
+		paddingHorizontal: 14,
+		marginBottom: 12,
 	}
 });
