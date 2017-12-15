@@ -64,6 +64,8 @@ class NewsListScreen extends Component {
 					data={this.props.articles}
 					renderItem={this.renderNewsItem}
 					keyExtractor={this.extractNewsItemKey}
+					refreshing={false}
+					onRefresh={this.props.fetchNews}
 				/>
         :
 				<LoadingIndicator />
