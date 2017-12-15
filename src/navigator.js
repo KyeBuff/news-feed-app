@@ -16,9 +16,16 @@ const extraStyles = Platform.select({
 
 export default StackNavigator({
   List: {screen: NewsListScreen},
-  // Detail: {screen: NewsDetailScreen},
+  Detail: {screen: NewsDetailScreen},
 }, {
 	navigationOptions: {
-		headerStyle: extraStyles,
+		headerStyle: {
+			backgroundColor: '#d35400',
+			...extraStyles,
+		},
+		headerTitleStyle: {
+			color: '#fff',
+		},
+		headerTintColor: '#fff',
 	}
 });
