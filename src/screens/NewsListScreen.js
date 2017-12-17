@@ -4,12 +4,13 @@ import { StyleSheet, View, FlatList } from 'react-native';
 import news from '../data/news.json';
 import { connect } from 'react-redux';
 import {fetchNews} from '../actions/actions';
-import { getNewsSelector } from '../store/news';
+import { getNewsSelector, getNewsRefreshing } from '../store/news';
 import LoadingIndicator from '../components/LoadingIndicator';
 
 const mapStateToProps = (state) => {
 	return {
 		articles: getNewsSelector(state),
+		isRefreshing: getNewsRefreshing(state),
 	}
 }
 
@@ -64,7 +65,7 @@ class NewsListScreen extends Component {
 					data={this.props.articles}
 					renderItem={this.renderNewsItem}
 					keyExtractor={this.extractNewsItemKey}
-					refreshing={false}
+					refreshing={this.props.isRefreshing}
 					onRefresh={this.props.fetchNews}
 				/>
         :
