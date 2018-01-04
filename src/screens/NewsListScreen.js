@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import NewsListItem from '../components/NewsListItem';
 import { StyleSheet, View, FlatList } from 'react-native';
-import news from '../data/news.json';
 import { connect } from 'react-redux';
 import {fetchNews} from '../actions/actions';
 import { getNewsSelector, getNewsRefreshing } from '../store/news';
