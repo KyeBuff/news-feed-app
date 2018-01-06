@@ -28,7 +28,7 @@ I also added pull-to-refresh functionality.
 <img width="300" src="http://kyebuffery.co.uk/news-feed-native/bbc-news.gif" alt="News Feed GIF"/>
 
 ## Getting Started
-The app can be installed by cloning the Git repository and running 'yarn add' in the project directory. Once all packages are installed, you can run 'yarn start' to run the app in localhost.
+The app can be installed by cloning the Git repository and running 'npm install' in the project directory. Once all packages are installed, you can run 'npm start' to run the app in localhost.
 
 To simulate the app in a mobile device, type i in the CLI and this run the app in an emulated iOS device.
 
